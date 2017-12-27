@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.liangke.comprehensive">
+
+
+    <application
+        android:name="com.liangke.comprehensive.main.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme2"
+        >
+        <activity android:name="com.liangke.comprehensive.main.MainActivity"
+            android:screenOrientation="portrait"
+            >
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name="com.liangke.comprehensive.splash.TestActivity"
+            >
+
+        </activity>
+        <activity android:name=".market.SingleMarketActivity"
+            android:configChanges="keyboardHidden|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            >
+        </activity>
+        <activity android:name=".register.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+        <activity android:name=".register.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+        <activity android:name=".market.ChoiceAssetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            >
+
+        </activity>
+        <activity android:name=".register.FindPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+        <activity android:name=".market.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+        <activity android:name=".home.HomeSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+        <activity android:name=".position.ActionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+        <activity android:name=".market.ProductListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+
+
+        <meta-data android:value="5a3dfc00b27b0a24d9000100" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="178341be974ba83f858d9d32aacd8504">
+        </meta-data>
+
+
+    </application>
+
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+
+
+    <!-- 必须的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 推荐的权限 -->
+    <!-- 添加如下权限，以便使用更多的第三方SDK和更精准的统计数据 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+</manifest>

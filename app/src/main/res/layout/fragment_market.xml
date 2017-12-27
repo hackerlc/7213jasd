@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.liangke.mvvm.viewmodel.MarketViewModel"
+            ></variable>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/ll_main"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+            <LinearLayout
+                android:id="@+id/ll_search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_search_gray"
+                />
+            </LinearLayout>
+
+            <com.liangke.widget.HorizontalListView
+                android:id="@+id/hll_list"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:overScrollMode="never"
+                ></com.liangke.widget.HorizontalListView>
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical|right"
+                android:paddingRight="5dp"
+                >
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@mipmap/groupcopy"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!--<android.support.v4.view.ViewPager-->
+            <!--android:id="@+id/vp_fragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"></android.support.v4.view.ViewPager>-->
+
+        <FrameLayout
+            android:id="@+id/fl_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+
+
+    </LinearLayout>
+
+
+
+</layout>

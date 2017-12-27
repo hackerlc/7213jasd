@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.liangke.mvvm.viewmodel.ChoiceAssetViewModel"
+            ></variable>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选几只你感兴趣的资产"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black_01"
+                android:textSize="16sp"
+                />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:onClick="onBackFinish"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/icon_back"
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            ></android.support.v4.view.ViewPager>
+
+
+        <com.liangke.widget.DotLinearLayout
+            android:id="@+id/dll_dot"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+        </com.liangke.widget.DotLinearLayout>
+
+        <Button
+            android:id="@+id/b_ok"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="选好了"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@color/blue_01"
+            />
+
+    </LinearLayout>
+
+
+
+</layout>

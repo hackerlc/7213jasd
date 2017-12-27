@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">综合APP</string>
+
+    <string-array name="chartTypeArray">
+        <item>1分</item>
+        <item>3分</item>
+        <item>5分</item>
+        <item>15分</item>
+        <item>30分</item>
+        <item>1天</item>
+        <item>1周</item>
+        <item>1月</item>
+    </string-array>
+
+</resources>

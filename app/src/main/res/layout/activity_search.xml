@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+ >
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.liangke.mvvm.viewmodel.SearchViewModel"
+            ></variable>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/icon_search_gray"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="搜索资产代码/简拼"
+                android:textSize="14sp"
+                android:textColor="@color/black_01"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/gray_01"
+                android:textCursorDrawable="@drawable/cursordrawable"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textColor="@color/blue_01"
+                android:textSize="14sp"
+
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_02"
+            ></View>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大家都在看"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_shape_cornor_solid_gray_01"
+            android:layout_margin="10dp"
+            android:padding="2dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_02"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            ></View>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            ></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+</layout>

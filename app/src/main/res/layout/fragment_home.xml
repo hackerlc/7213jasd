@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.liangke.mvvm.viewmodel.HomeViewModel"
+            ></variable>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/ll_main"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/cb_banner"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:canLoop="true" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                >
+                <LinearLayout
+                    android:id="@+id/ll_search"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_search"
+                        />
+                </LinearLayout>
+
+                <com.liangke.widget.HorizontalListView
+                    android:id="@+id/hll_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:overScrollMode="never"
+                    ></com.liangke.widget.HorizontalListView>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_add"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="5dp"
+                    >
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@mipmap/icon_add_white"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

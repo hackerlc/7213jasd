@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.liangke.mvvm.bean.SearchBean"
+            ></variable>
+
+        <variable
+            name="viewModel"
+            type="com.liangke.mvvm.viewmodel.MainViewModel"
+            ></variable>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="@{item.keyWord}"
+            android:textColor="@color/black_01"
+            android:textSize="14sp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+</layout>

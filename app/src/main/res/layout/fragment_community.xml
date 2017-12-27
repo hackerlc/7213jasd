@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.liangke.mvvm.viewmodel.CommunityViewModel"
+            ></variable>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <LinearLayout
+                android:id="@+id/ll_ling"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="23dp"
+                    android:src="@mipmap/icon_notice" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_user"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ll_ling"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="23dp"
+                    android:src="@mipmap/icon_notice" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="社区"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"/>
+            <LinearLayout
+                android:id="@+id/ll_user"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="23dp"
+                    android:src="@mipmap/icon_notice" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/bg_shape_cornor_solid_gray_02"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="6dp"
+                    android:src="@mipmap/ic_launcher"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:hint="搜索文章/用户"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/blue_04"
+                android:text="取消"/>
+        </LinearLayout>
+        <com.liangke.widget.HorizontalListView
+            android:id="@+id/hll_list"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:overScrollMode="never"
+            ></com.liangke.widget.HorizontalListView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+</layout>
